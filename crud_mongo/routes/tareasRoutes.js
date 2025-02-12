@@ -5,7 +5,7 @@ const tareaController = require('../controllers/tareasController')
 router.get('/', tareaController.getTareas)
 router.get('/:estado', tareaController.getTareasEstado)
 router.post('/', tareaController.createTarea)
-router.put('/:id', tareaController.updateTarea)
+router.put('/:id', tareaController.updateTareaEstado)
 router.delete('/:id', tareaController.deleteTarea)
 
 module.exports = router

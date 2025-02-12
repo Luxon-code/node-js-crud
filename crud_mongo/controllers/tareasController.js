@@ -13,11 +13,11 @@ exports.getTareasEstado = async (req, res) => {
 exports.createTarea = async (req, res) => {
   const newTarea = new Tareas(req.body)
   await newTarea.save()
-  res.json(newTarea)
+  res.json({ mensaje: 'Usuario creado correctamente' })
 }
 
-exports.updateTarea = async (req, res) => {
-  const updatedTarea = await Tareas.findByIdAndUpdate(req.params.id, req.body, { new: true })
+exports.updateTareaEstado = async (req, res) => {
+  const updatedTarea = await Tareas.findByIdAndUpdate(req.params.id, { estado: req.body.estado }, { new: true })
   res.json(updatedTarea)
 }
 
