@@ -137,4 +137,4 @@ function actualizarEstado (id, status) {
     .catch(error => console.log(error))
 }
 
-listarTabla()// prueba de cambio
+listarTabla()// prueba
